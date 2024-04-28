@@ -1,0 +1,22 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+}
+
+group = 'me.eldodebug'
+version = '1.0.0-ALPHA'
+
+apply plugin: 'java'
+
+repositories {
+	maven { url 'https://www.jitpack.io' }
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
